@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://karthickdhanapal.com/sitemap.xml

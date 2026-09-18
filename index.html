@@ -1,0 +1,2818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthick Dhanapal - AI & Agentic Systems Engineer | Full Stack Architect</title>
+    <meta name="description" content="AI & Agentic Engineering specialist. Built Light & Wonder's AI Harness Studio. Claude Enterprise & MCP expert. 10+ years full-stack.">
+    <link rel="canonical" href="https://karthickdhanapal.com/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="theme-color" content="#d4af37">
+
+    <!-- Open Graph / social link previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karthickdhanapal.com/">
+    <meta property="og:site_name" content="Karthick Dhanapal">
+    <meta property="og:title" content="Karthick Dhanapal - AI & Agentic Systems Engineer | Full Stack Architect">
+    <meta property="og:description" content="AI & Agentic Engineering specialist. Built Light & Wonder's AI Harness Studio. Claude Enterprise & MCP expert. 10+ years full-stack.">
+    <meta property="og:image" content="https://karthickdhanapal.com/karthick-profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Karthick Dhanapal - AI & Agentic Systems Engineer | Full Stack Architect">
+    <meta name="twitter:description" content="AI & Agentic Engineering specialist. Built Light & Wonder's AI Harness Studio. Claude Enterprise & MCP expert. 10+ years full-stack.">
+    <meta name="twitter:image" content="https://karthickdhanapal.com/karthick-profile.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Karthick Dhanapal",
+        "jobTitle": "AI & Agentic Systems Architect",
+        "url": "https://karthickdhanapal.com/",
+        "image": "https://karthickdhanapal.com/karthick-profile.jpg",
+        "email": "mailto:karthickd.tech@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://github.com/Karthick-dev-cart",
+            "https://linkedin.com/in/karthick-lakshmidhanapal-bab76324b"
+        ]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f0a1a;
+            --bg-secondary: #1a1425;
+            --bg-tertiary: #0f0a1a;
+            --text-primary: #f5f3ff;
+            --text-secondary: #d8d0e8;
+            --text-muted: #9f94b8;
+            --accent: #d4af37;
+            --accent-light: #e8c547;
+            --accent-dark: #b8931f;
+            --purple: #9d4edd;
+            --purple-dark: #7209b7;
+            --purple-light: #c77dff;
+            --border: #3d2e52;
+            --border-light: #4d3a63;
+            --gradient: linear-gradient(135deg, #d4af37 0%, #9d4edd 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary), var(--bg-tertiary));
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(15, 10, 26, 0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--purple-dark);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.25s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 32px;
+            height: 32px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 10, 26, 0.98);
+                border-bottom: 2px solid var(--purple-dark);
+                padding: 1.5rem;
+                gap: 1.25rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 1.5rem 2rem;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(157, 78, 221, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.75rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            max-width: 550px;
+        }
+
+        .expertise-tags {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .expertise-tag {
+            background: rgba(157, 78, 221, 0.2);
+            border: 1px solid var(--purple);
+            color: var(--purple-light);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            position: relative;
+            overflow: hidden;
+            padding: 0.875rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -60%;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.6s ease;
+        }
+
+        .btn:hover::before {
+            left: 130%;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 1rem;
+            border: 3px solid var(--accent);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+            transition: all 0.3s;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 30px 80px rgba(212, 175, 55, 0.3);
+        }
+
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-image img {
+                max-width: 350px;
+            }
+        }
+
+        .neural-canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.55;
+        }
+
+        .hero-ticker {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            min-height: 1.4rem;
+        }
+
+        .hero-ticker-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
+            box-shadow: 0 0 8px var(--accent);
+            animation: pulse-dot 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.75); }
+        }
+
+        .hero-ticker-text {
+            transition: opacity 0.4s ease;
+        }
+
+        .hero-ticker-text.swap {
+            opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-ticker-dot { animation: none; }
+        }
+
+        /* Card tilt (JS-driven transform, pointer:fine only) */
+        .achievement-card, .project-card {
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        section.alt {
+            background: rgba(157, 78, 221, 0.03);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Highlight Stats */
+        .highlight-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(157, 78, 221, 0.1));
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .highlight-content h4 {
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Achievements Grid */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .achievement-card {
+            padding: 2rem;
+            background: rgba(30, 20, 50, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            transition: all 0.3s;
+        }
+
+        .achievement-card:hover {
+            border-color: var(--accent);
+            background: rgba(30, 20, 50, 0.9);
+            transform: translateY(-5px);
+        }
+
+        .achievement-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: var(--bg-primary);
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h4 {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .achievement-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Experience */
+        .experience-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gradient);
+        }
+
+        .experience-item {
+            padding-left: 3rem;
+            padding-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 4px solid var(--bg-secondary);
+        }
+
+        .experience-date {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-company {
+            font-size: 1.05rem;
+            color: var(--purple-light);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            margin-bottom: 0.75rem;
+            color: var(--text-muted);
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .bullet-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            padding: 2rem;
+            background: rgba(157, 78, 221, 0.08);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            border-color: var(--accent);
+            background: rgba(157, 78, 221, 0.12);
+        }
+
+        .skill-category h4 {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .skill-list li::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cert-badge {
+            padding: 1.5rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 0.75rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .cert-badge:hover {
+            background: rgba(212, 175, 55, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .cert-badge .cert-org {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-badge .cert-name {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        /* Contact */
+        .contact-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            padding: 2rem;
+            background: rgba(157, 78, 221, 0.08);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in { animation: none; }
+        }
+
+        /* Stats band */
+        .stats-band {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-tile {
+            text-align: center;
+            padding: 1.75rem 1rem;
+            background: rgba(157, 78, 221, 0.08);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 900;
+            font-variant-numeric: tabular-nums;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+        }
+
+        /* Project filter tabs */
+        .project-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            background: rgba(157, 78, 221, 0.08);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 0.6rem 1.25rem;
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .filter-btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .filter-btn[aria-selected="true"] {
+            background: var(--gradient);
+            color: var(--bg-primary);
+            border-color: transparent;
+        }
+
+        .filter-count {
+            font-size: 0.8em;
+            opacity: 0.75;
+        }
+
+        .project-category[hidden] {
+            display: none;
+        }
+
+        .subgroup-heading {
+            color: var(--accent);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 2rem 0 1rem;
+        }
+
+        .subgroup-heading:first-child {
+            margin-top: 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card {
+            padding: 1.75rem;
+            background: rgba(30, 20, 50, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            background: rgba(30, 20, 50, 0.9);
+            transform: translateY(-4px);
+        }
+
+        .project-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-star {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .project-card h4 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            flex-grow: 1;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.25rem;
+        }
+
+        .pill-link {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 50px;
+            padding: 0.35rem 0.85rem;
+            transition: all 0.25s;
+        }
+
+        .pill-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .pill-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .pill-link-accent {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .pill-link-accent:hover {
+            background: rgba(212, 175, 55, 0.12);
+        }
+
+        .games-search-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .game-search-input {
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            background: rgba(157, 78, 221, 0.08);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 0.7rem 1.1rem;
+            min-width: 260px;
+            flex: 1 1 260px;
+        }
+
+        .game-search-input:focus-visible {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .games-search-hint {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .games-empty {
+            color: var(--text-muted);
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Karthick Dhanapal</div>
+            <div class="nav-links" id="nav-links">
+                <a href="#home">Home</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="neural-canvas" class="neural-canvas" aria-hidden="true"></canvas>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">🚀 AI & Agentic Systems Architect</div>
+                <h1>
+                    Building intelligent
+                    <span class="gradient-text">enterprise AI systems</span>
+                    that scale
+                </h1>
+                <p class="hero-description">
+                    Founder-builder of Light & Wonder's AI Harness Studio. Claude Enterprise & GitHub Copilot expert. ~10 years full-stack engineering, 1.5+ years architecting production AI workflows with MCP integrations and agentic pipelines.
+                </p>
+
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Claude Enterprise</span>
+                    <span class="expertise-tag">MCP Architecture</span>
+                    <span class="expertise-tag">AI Workflows</span>
+                    <span class="expertise-tag">Full Stack</span>
+                    <span class="expertise-tag">System Design</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#achievements" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    <a href="https://github.com/Karthick-dev-cart" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+                </div>
+
+                <div class="hero-ticker">
+                    <span class="hero-ticker-dot"></span>
+                    <span class="hero-ticker-text" id="hero-ticker-text">Also shipping on the side: 91 public repos</span>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="karthick-profile.jpg" alt="Karthick Dhanapal - AI Engineer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Highlight -->
+    <section id="expertise" class="alt">
+        <div class="container">
+            <h2>Core Expertise</h2>
+            <div class="highlight-section">
+                <h3 style="margin-top: 0; color: var(--accent);">AI & Agentic Engineering Specialization</h3>
+                <div class="highlight-grid">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🤖</div>
+                        <div class="highlight-content">
+                            <h4>Claude Enterprise & Agentic AI</h4>
+                            <p>Production experience building Claude-powered AI workflows, prompt engineering at scale, and agentic pipeline architecture.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🔗</div>
+                        <div class="highlight-content">
+                            <h4>MCP Server Integration</h4>
+                            <p>Implemented Figma (design-to-code) and Playwright (automated testing) MCP servers wired into Claude agentic pipelines.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">⚙️</div>
+                        <div class="highlight-content">
+                            <h4>Full Stack Development</h4>
+                            <p>React, Angular, Node.js, TypeScript. From AI-powered front-ends to high-performance backend systems and real-time streaming.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">☁️</div>
+                        <div class="highlight-content">
+                            <h4>Cloud & Enterprise Architecture</h4>
+                            <p>Azure, Dynamics 365, Power Platform expertise. Delivered solutions across Singapore, Southeast Asia, and UAE.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🎮</div>
+                        <div class="highlight-content">
+                            <h4>Applied AI Products</h4>
+                            <p>Shipped facial recognition modules, WebGL game overlays, and real-time AI-driven UI testing for live gaming platforms.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">📚</div>
+                        <div class="highlight-content">
+                            <h4>AI Knowledge Systems</h4>
+                            <p>Architected QI Library & AI Harness Studio — organization-wide repositories standardizing AI-assisted development across teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Achievements -->
+    <section id="achievements">
+        <div class="container">
+            <h2>Major Achievements</h2>
+            <p class="section-subtitle">Product-level impact and engineering leadership</p>
+
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-badge">AI PLATFORM</div>
+                    <h4>AI Harness Studio</h4>
+                    <p>Architected and shipped an organization-wide platform for managing Claude-powered feature experiments, A/B testing, and safe rollout of LLM capabilities across engineering teams.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-badge">KNOWLEDGE BASE</div>
+                    <h4>QI Library</h4>
+                    <p>Built a standardized repository of prompts, skills, commands, and instruction sets for AI-assisted development. Accelerated team productivity and reduced boilerplate across teams.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-badge">MCP INTEGRATION</div>
+                    <h4>Figma & Playwright MCP Servers</h4>
+                    <p>Integrated MCP servers directly into Claude agentic pipelines for automated design-to-code handoff and AI-driven UI testing without context switching.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-badge">PRODUCT FEATURE</div>
+                    <h4>Facial Recognition Module</h4>
+                    <p>Shipped computer vision integrated across front-end and API layers for production gaming platform. Real-time inference and optimization.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-badge">GAME TECH</div>
+                    <h4>WebGL Game Overlay</h4>
+                    <p>Built real-time WebGL-based overlay for live gaming platform (iView). Performance-optimized 60fps rendering with AI-driven interactions.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-badge">DEVELOPER TOOLS</div>
+                    <h4>Custom Code Generators & IDE Extensions</h4>
+                    <p>Built internal tooling to reduce boilerplate and accelerate engineering workflows. Semantic analyzers and automated scaffolding systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience" class="alt">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <p class="section-subtitle">~10 years across AI, enterprise, and gaming technology</p>
+
+            <div class="experience-timeline">
+                <!-- Light & Wonder -->
+                <div class="experience-item">
+                    <div class="experience-date">Apr 2024 – Present</div>
+                    <div class="experience-title">Full Stack Developer / Advanced Software Engineer</div>
+                    <div class="experience-company">Light & Wonder • Chennai, India</div>
+                    <div class="experience-description">
+                        Leading AI systems and full-stack development for iView, DMX, ENGAGE, and SEA server products.
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Architected AI Harness Studio & QI Library — standardizing AI-assisted development organization-wide</li>
+                        <li>Integrated Figma and Playwright MCP servers into Claude agentic pipelines for automated workflows</li>
+                        <li>Shipped applied-AI features: facial recognition module and WebGL game overlay</li>
+                        <li>Built internal developer tooling: code generators, IDE extensions, semantic analyzers</li>
+                        <li>Owned full-stack delivery: React front-ends, Node.js/API backends, performance optimization</li>
+                        <li>Adopted Angular 21 with Signals and zoneless change detection for performant reactive components</li>
+                        <li>Contributed to real-time and VOD streaming platforms with Kafka, Redis, adaptive streaming</li>
+                    </ul>
+                </div>
+
+                <!-- Persistent Systems -->
+                <div class="experience-item">
+                    <div class="experience-date">Sept 2022 – Apr 2024</div>
+                    <div class="experience-title">Dynamics CRM Technical Solution Architect</div>
+                    <div class="experience-company">Persistent Systems (LSAC Microsoft) • Chennai, India</div>
+                    <div class="experience-description">
+                        Enterprise architecture and modernization of cloud-based CRM solutions.
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Implemented Dynamics 365 Marketing customizations: customer journeys, triggers, segments</li>
+                        <li>Modernized Angular components (v21), services, pipes, directives with TypeScript</li>
+                        <li>Built RESTful Web Services APIs serving JSON to front-end applications</li>
+                        <li>Deployed and customized event portal applications with timezone handling</li>
+                        <li>Configured Azure resources (VMs, AD, Web Apps, Databases) with CI/CD pipelines</li>
+                        <li>Practiced TDD with Jasmine/Karma in Agile delivery teams</li>
+                    </ul>
+                </div>
+
+                <!-- Sony -->
+                <div class="experience-item">
+                    <div class="experience-date">Jun 2019 – Jul 2022</div>
+                    <div class="experience-title">Technical Solution Architect</div>
+                    <div class="experience-company">Sony (Web Synergies) • Singapore</div>
+                    <div class="experience-description">
+                        Cloud infrastructure and enterprise application design across Southeast Asia.
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Designed and deployed Azure solutions: App Service, VMs, Logic Apps, Blob/File Storage</li>
+                        <li>Migrated on-premise applications to Azure with data partitioning (hot/cold/archive tiers)</li>
+                        <li>Configured Azure Application Gateway, WAF rules, autoscaling, private VNet connections</li>
+                        <li>Delivered Dynamics 365: Lead-to-Order, Power Apps/Power Automate integrations, CDS entities</li>
+                        <li>Key projects: SONY Scanner (Power Apps inventory), Crisis Management (COVID tracking), Dealer Portals (Southeast Asia), CiPS (Field Service, UAE)</li>
+                    </ul>
+                </div>
+
+                <!-- RAVSoft -->
+                <div class="experience-item">
+                    <div class="experience-date">Jul 2017 – Jul 2019</div>
+                    <div class="experience-title">Software Engineer</div>
+                    <div class="experience-company">RAVSoft Solutions India Pvt. Ltd. • Chennai</div>
+                    <div class="experience-description">
+                        Pre-sales engineering and Dynamics 365 solutions delivery.
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Supported pre-sales: RFPs, resourcing, costing, end-to-end Dynamics 365 sales process</li>
+                        <li>Built customized views, workflows, plugins; implemented Lead-to-Order, ERM modules</li>
+                        <li>Delivered: Lead2Sale (USA), Blu-Ring medical imaging (IBM, Canada), VNASync PACS, PyDICOM PDF generator</li>
+                    </ul>
+                </div>
+
+                <!-- Excelacom -->
+                <div class="experience-item">
+                    <div class="experience-date">Apr 2016 – Jul 2017</div>
+                    <div class="experience-title">Programming Analyst</div>
+                    <div class="experience-company">Excelacom • Chennai</div>
+                    <div class="experience-description">
+                        Business rules engine and enterprise application development.
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Developed DROOLS business-rules components for Smart Quote (Fairpoint, USA)</li>
+                        <li>Implemented Clone Quote, Rule Management, Export Management modules</li>
+                        <li>Unit and integration testing with Mockito/PowerMockito</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <p class="section-subtitle">Comprehensive expertise across AI, full-stack, and enterprise systems</p>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>🤖 AI & Agentic Systems</h4>
+                    <ul class="skill-list">
+                        <li>Claude Enterprise & Claude Code</li>
+                        <li>GitHub Copilot Enterprise</li>
+                        <li>Agentic AI Architecture</li>
+                        <li>Prompt Engineering at Scale</li>
+                        <li>MCP (Model Context Protocol)</li>
+                        <li>LLM Tooling & Orchestration</li>
+                        <li>AI Workflow Automation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>⚛️ Frontend Development</h4>
+                    <ul class="skill-list">
+                        <li>React & Next.js</li>
+                        <li>Angular 21 (Signals, Zoneless)</li>
+                        <li>TypeScript & JavaScript</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>WebGL & Canvas</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>🖥️ Backend & APIs</h4>
+                    <ul class="skill-list">
+                        <li>Node.js & Express</li>
+                        <li>REST & GraphQL APIs</li>
+                        <li>C# & ASP.NET Core</li>
+                        <li>Java & Python</li>
+                        <li>Kafka & Redis</li>
+                        <li>Microservices Architecture</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>☁️ Cloud & Enterprise</h4>
+                    <ul class="skill-list">
+                        <li>Azure (App Service, Functions)</li>
+                        <li>Microsoft Dynamics 365</li>
+                        <li>Power Platform & Power Apps</li>
+                        <li>Azure DevOps & CI/CD</li>
+                        <li>Managed SQL & Blob Storage</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>🛠️ DevOps & Tools</h4>
+                    <ul class="skill-list">
+                        <li>Git & GitHub Actions</li>
+                        <li>Perforce & Azure DevOps</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>YAML & PowerShell</li>
+                        <li>JIRA & Agile</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>📊 Specializations</h4>
+                    <ul class="skill-list">
+                        <li>System Design & Architecture</li>
+                        <li>Real-time Streaming (HLS/DASH)</li>
+                        <li>Computer Vision Integration</li>
+                        <li>Performance Optimization</li>
+                        <li>Technical Leadership</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects & Open Source -->
+    <section id="projects" class="alt">
+        <div class="container">
+            <h2>Personal Projects & Open Source</h2>
+            <p class="section-subtitle">Independent work outside the day job &mdash; every repo below is self-directed and public on GitHub.</p>
+
+            <div class="stats-band">
+                <div class="stat-tile">
+                    <span class="stat-number" data-target="91">91</span>
+                    <span class="stat-label">Public repos</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-number" data-target="58">58</span>
+                    <span class="stat-label">Flutter games</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-number" data-target="57">57</span>
+                    <span class="stat-label">Shipped as Windows + Android builds</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-number" data-target="24">24</span>
+                    <span class="stat-label">LLM / agent-ops tools</span>
+                </div>
+            </div>
+
+            <div class="project-filters" role="tablist" aria-label="Filter projects by category">
+                <button class="filter-btn" data-filter="all" role="tab" aria-selected="false">All <span class="filter-count">91</span></button>
+                <button class="filter-btn" data-filter="flagship" role="tab" aria-selected="true">Flagship <span class="filter-count">5</span></button>
+                <button class="filter-btn" data-filter="llmops" role="tab" aria-selected="false">LLM / Agent-Ops <span class="filter-count">24</span></button>
+                <button class="filter-btn" data-filter="mcp" role="tab" aria-selected="false">MCP Servers <span class="filter-count">4</span></button>
+                <button class="filter-btn" data-filter="games" role="tab" aria-selected="false">Games <span class="filter-count">58</span></button>
+            </div>
+
+            <div class="project-category" data-category="flagship">
+                <div class="projects-grid">
+<article class="project-card" data-name="horizon">
+    <div class="project-card-top">
+        <span class="achievement-badge">AGENT INFRASTRUCTURE</span>
+        
+    </div>
+    <h4>horizon</h4>
+    <p>Context-window budget manager for long-running Claude agents — drops or summarizes old turns to stay within budget, never crashing on overflow.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/horizon" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="quorum">
+    <div class="project-card-top">
+        <span class="achievement-badge">AGENT INFRASTRUCTURE</span>
+        
+    </div>
+    <h4>quorum</h4>
+    <p>Multi-agent orchestration control plane built around budget enforcement and failure isolation, not happy-path demos.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/quorum" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="pathfinder">
+    <div class="project-card-top">
+        <span class="achievement-badge">AGENT INFRASTRUCTURE</span>
+        
+    </div>
+    <h4>pathfinder</h4>
+    <p>Long-horizon task planner that detects plan drift and replans only the remaining work.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/pathfinder" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="ridealert">
+    <div class="project-card-top">
+        <span class="achievement-badge">ANDROID</span>
+        
+    </div>
+    <h4>RideAlert</h4>
+    <p>Full-screen, alarm-volume alert app for ride-hailing drivers — fires a loud lock-screen alert whenever Uber, Ola, or Rapido post a notification, even in silent mode.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/RideAlert" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Kotlin</a>
+        <a href="https://github.com/Karthick-dev-cart/RideAlert/releases/download/v1.0.0/app-debug.apk" class="pill-link pill-link-accent">Download APK</a>
+    </div>
+</article>
+<article class="project-card" data-name="hearth-design-system">
+    <div class="project-card-top">
+        <span class="achievement-badge">DESIGN SYSTEM</span>
+        
+    </div>
+    <h4>hearth-design-system</h4>
+    <p>A Claude-inspired design system: design tokens, accessible React components, and a written rulebook for consistent product UI.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/hearth-design-system" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; TypeScript</a>
+        <a href="https://github.com/Karthick-dev-cart/hearth-design-system/releases" target="_blank" rel="noopener noreferrer" class="pill-link pill-link-accent">Releases</a>
+    </div>
+</article>
+                </div>
+            </div>
+
+            <div class="project-category" data-category="llmops">
+<h4 class="subgroup-heading">Cost &amp; pricing</h4>
+<div class="projects-grid">
+<article class="project-card" data-name="batch-economics">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>batch-economics</h4>
+    <p>Real-time vs. batch-API tradeoff calculator for LLM costs — accounts for the latency cost batching hides</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/batch-economics" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="cache-yield">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>cache-yield</h4>
+    <p>Estimates how much prompt caching would have saved on a historical LLM request log</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/cache-yield" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="finetune-vs-prompt">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>finetune-vs-prompt</h4>
+    <p>Cost breakeven calculator: fine-tuning vs. long-context/RAG prompting</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/finetune-vs-prompt" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="model-arbitrage">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>model-arbitrage</h4>
+    <p>Cross-provider (Anthropic/OpenAI/Google) LLM pricing comparator for a fixed workload shape</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/model-arbitrage" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="pareto-router">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>pareto-router</h4>
+    <p>Finds the cost/quality Pareto-optimal frontier in a historical log of real LLM request outcomes</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/pareto-router" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="rag-costmap">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>rag-costmap</h4>
+    <p>Offline cost-planning calculator for RAG systems — projects indexing, storage, and query costs from 10K to 10M docs</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/rag-costmap" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="spend-sentinel">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>spend-sentinel</h4>
+    <p>Offline statistical anomaly detector for LLM API billing/usage logs</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/spend-sentinel" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="tokendiff">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>tokendiff</h4>
+    <p>CI-friendly tool that catches prompt-template token-cost regressions before they merge</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/tokendiff" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="tokenledger">
+    <div class="project-card-top">
+        <span class="achievement-badge">COST &amp; PRICING</span>
+        
+    </div>
+    <h4>tokenledger</h4>
+    <p>Token cost-attribution ledger for LLM API usage</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/tokenledger" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+</div>
+<h4 class="subgroup-heading">RAG &amp; retrieval quality</h4>
+<div class="projects-grid">
+<article class="project-card" data-name="chunk-bench">
+    <div class="project-card-top">
+        <span class="achievement-badge">RAG &amp; RETRIEVAL QUALITY</span>
+        
+    </div>
+    <h4>chunk-bench</h4>
+    <p>Reproducible benchmark harness comparing document-chunking strategies by their effect on retrieval quality</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/chunk-bench" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="context-packer">
+    <div class="project-card-top">
+        <span class="achievement-badge">RAG &amp; RETRIEVAL QUALITY</span>
+        
+    </div>
+    <h4>context-packer</h4>
+    <p>Selects the max-relevance subset of retrieved chunks that fits a fixed context-token budget</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/context-packer" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="groundcheck">
+    <div class="project-card-top">
+        <span class="achievement-badge">RAG &amp; RETRIEVAL QUALITY</span>
+        
+    </div>
+    <h4>groundcheck</h4>
+    <p>RAG groundedness/hallucination checker — flags answer sentences not supported by retrieved context</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/groundcheck" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="index-decay">
+    <div class="project-card-top">
+        <span class="achievement-badge">RAG &amp; RETRIEVAL QUALITY</span>
+        
+    </div>
+    <h4>index-decay</h4>
+    <p>Staleness/drift monitor for RAG vector indexes using content-hashed manifests</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/index-decay" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="query-rewriter-bench">
+    <div class="project-card-top">
+        <span class="achievement-badge">RAG &amp; RETRIEVAL QUALITY</span>
+        
+    </div>
+    <h4>query-rewriter-bench</h4>
+    <p>Benchmark harness for RAG query-rewriting strategies</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/query-rewriter-bench" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="retrieval-arena">
+    <div class="project-card-top">
+        <span class="achievement-badge">RAG &amp; RETRIEVAL QUALITY</span>
+        
+    </div>
+    <h4>retrieval-arena</h4>
+    <p>Benchmarks sparse (BM25), dense, and hybrid retrieval against the same corpus and eval set</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/retrieval-arena" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+</div>
+<h4 class="subgroup-heading">Prompt &amp; guardrail testing</h4>
+<div class="projects-grid">
+<article class="project-card" data-name="guardrail-bench">
+    <div class="project-card-top">
+        <span class="achievement-badge">PROMPT &amp; GUARDRAIL TESTING</span>
+        
+    </div>
+    <h4>guardrail-bench</h4>
+    <p>Adversarial red-teaming harness that scores a system prompt&#x27;s guardrail robustness via an LLM judge</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/guardrail-bench" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="prompt-regress">
+    <div class="project-card-top">
+        <span class="achievement-badge">PROMPT &amp; GUARDRAIL TESTING</span>
+        
+    </div>
+    <h4>prompt-regress</h4>
+    <p>Behavioral regression testing for prompt templates — flags semantic drift and format breaks</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/prompt-regress" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="rubric">
+    <div class="project-card-top">
+        <span class="achievement-badge">PROMPT &amp; GUARDRAIL TESTING</span>
+        
+    </div>
+    <h4>rubric</h4>
+    <p>LLM-as-judge eval harness — rubric criteria in, structured pass/fail report out</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/rubric" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="tool-contract">
+    <div class="project-card-top">
+        <span class="achievement-badge">PROMPT &amp; GUARDRAIL TESTING</span>
+        
+    </div>
+    <h4>tool-contract</h4>
+    <p>Static schema-drift detector for MCP/Claude tool JSON Schema definitions</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/tool-contract" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+</div>
+<h4 class="subgroup-heading">Agent observability &amp; debugging</h4>
+<div class="projects-grid">
+<article class="project-card" data-name="agent-graph">
+    <div class="project-card-top">
+        <span class="achievement-badge">AGENT OBSERVABILITY &amp; DEBUGGING</span>
+        
+    </div>
+    <h4>agent-graph</h4>
+    <p>Offline forensic tool that reconstructs a multi-agent call tree from Claude session transcripts</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/agent-graph" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="session-replay">
+    <div class="project-card-top">
+        <span class="achievement-badge">AGENT OBSERVABILITY &amp; DEBUGGING</span>
+        
+    </div>
+    <h4>session-replay</h4>
+    <p>Deterministic offline replay/debugger for Claude agent session transcripts</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/session-replay" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="waypoint">
+    <div class="project-card-top">
+        <span class="achievement-badge">AGENT OBSERVABILITY &amp; DEBUGGING</span>
+        
+    </div>
+    <h4>waypoint</h4>
+    <p>Durable, checkpointed workflow engine for chaining Claude-powered steps with human-in-the-loop approval gates</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/waypoint" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="workflow-profiler">
+    <div class="project-card-top">
+        <span class="achievement-badge">AGENT OBSERVABILITY &amp; DEBUGGING</span>
+        
+    </div>
+    <h4>workflow-profiler</h4>
+    <p>Per-step performance profiler for multi-step Claude Code-style agent workflows</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/workflow-profiler" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+</div>
+<h4 class="subgroup-heading">Other</h4>
+<div class="projects-grid">
+<article class="project-card" data-name="flowforge">
+    <div class="project-card-top">
+        <span class="achievement-badge">OTHER</span>
+        
+    </div>
+    <h4>flowforge</h4>
+    <p>Small, config-driven, pluggable ETL pipeline toolkit for Python</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/flowforge" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+</div>
+
+            </div>
+
+            <div class="project-category" data-category="mcp">
+                <div class="projects-grid">
+<article class="project-card" data-name="triagekit-mcp">
+    <div class="project-card-top">
+        <span class="achievement-badge">MCP SERVER</span>
+        
+    </div>
+    <h4>triagekit-mcp</h4>
+    <p>TriageKit — a suite of small, focused MCP servers for automation engineers</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/triagekit-mcp" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="pipeline-doctor">
+    <div class="project-card-top">
+        <span class="achievement-badge">MCP SERVER</span>
+        
+    </div>
+    <h4>pipeline-doctor</h4>
+    <p>TriageKit — diagnoses Airflow DAG and dbt run failures, traces lineage impact, catches upstream-caused false alarms</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/pipeline-doctor" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="k8s-triage">
+    <div class="project-card-top">
+        <span class="achievement-badge">MCP SERVER</span>
+        
+    </div>
+    <h4>k8s-triage</h4>
+    <p>TriageKit — diagnoses unhealthy Kubernetes workloads and finds resource right-sizing candidates using real cluster state</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/k8s-triage" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="oss-scout">
+    <div class="project-card-top">
+        <span class="achievement-badge">MCP SERVER</span>
+        
+    </div>
+    <h4>oss-scout</h4>
+    <p></p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/oss-scout" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Python</a>
+        
+    </div>
+</article>
+                </div>
+            </div>
+
+            <div class="project-category" data-category="games">
+                <div class="games-search-row">
+                    <input type="text" id="game-search" class="game-search-input" placeholder="Search 58 games by name&hellip;" aria-label="Search games by name">
+                    <span class="games-search-hint">57 of 58 ship as downloadable Windows + Android builds</span>
+                </div>
+                <div class="projects-grid games-grid" id="games-grid">
+<article class="project-card" data-name="airhockey">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>airhockey</h4>
+    <p>Air Hockey in Flutter — real circle-circle collision response (not a paddle-vs-wall bounce), with the paddle&#x27;s own velocity partially transferred into the puck on impact.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/airhockey" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/airhockey/releases/download/v1.0.0/airhockey-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/airhockey/releases/download/v1.0.0/airhockey.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="anagram">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>anagram</h4>
+    <p>🔤 Anagram game built with Flutter that accepts any valid anagram of the letters, not just one intended word.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/anagram" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/anagram/releases/download/v1.0.0/anagram-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/anagram/releases/download/v1.0.0/anagram.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="asteroids">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>asteroids</h4>
+    <p>Asteroids arcade shooter in Flutter — wrap-around physics, drag-to-move ship, auto-fire, and asteroid-splitting-free simplified rock field.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/asteroids" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/asteroids/releases/download/v1.0.0/asteroids-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/asteroids/releases/download/v1.0.0/asteroids.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="balloonpop">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>balloonpop</h4>
+    <p>Balloon Pop Reflex in Flutter — tap rising balloons before they escape, avoid the bombs, with a spawn-rate difficulty ramp that increases over time.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/balloonpop" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/balloonpop/releases/download/v1.0.0/balloonpop-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/balloonpop/releases/download/v1.0.0/balloonpop.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="battleship">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>battleship</h4>
+    <p>🚢 Battleship built with Flutter, hunt-and-target AI opponent (not random guessing).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/battleship" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/battleship/releases/download/v1.0.0/battleship-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/battleship/releases/download/v1.0.0/battleship.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="blackjack">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>blackjack</h4>
+    <p>♠️ Blackjack built with Flutter, correct soft-ace scoring including the double-Ace case.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/blackjack" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/blackjack/releases/download/v1.0.0/blackjack-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/blackjack/releases/download/v1.0.0/blackjack.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="boggle">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        <span class="card-star">&#9733; 1</span>
+    </div>
+    <h4>boggle</h4>
+    <p>🔤 Boggle built with Flutter, authentic 16-cube dice set and path-validated word entry.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/boggle" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/boggle/releases/download/v1.0.0/boggle-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/boggle/releases/download/v1.0.0/boggle.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="brain_quest">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>brain_quest</h4>
+    <p>🧠 Four brain-training mini-games in one Flutter app — memory match, number merge, reflex trainer, and word scramble — with Firebase email/password sign-in.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/brain_quest" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Dart</a>
+        
+    </div>
+</article>
+<article class="project-card" data-name="breakout">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>breakout</h4>
+    <p>🧱 Breakout built with Flutter, Ticker-driven physics in a pure Dart class.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/breakout" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/breakout/releases/download/v1.0.0/breakout-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/breakout/releases/download/v1.0.0/breakout.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="bubbleshooter">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>bubbleshooter</h4>
+    <p>Bubble Shooter in Flutter — offset hex-grid match-3 popper: same-color connected-component search to pop groups of 3+, then a separate ceiling-reachability search to drop anything left stranded.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/bubbleshooter" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/bubbleshooter/releases/download/v1.0.0/bubbleshooter-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/bubbleshooter/releases/download/v1.0.0/bubbleshooter.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="checkers">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>checkers</h4>
+    <p>🔴⚫ Checkers built with Flutter, mandatory captures and multi-jump chains (not a simplified pass), minimax AI.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/checkers" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/checkers/releases/download/v1.0.0/checkers-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/checkers/releases/download/v1.0.0/checkers.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="chess">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>chess</h4>
+    <p>♟️ Chess built with Flutter, minimax + alpha-beta AI. Move generator verified with perft against chessprogramming.org reference values (start position depth 1-5, plus Kiwipete and a promotion-heavy position).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/chess" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; Dart</a>
+        <a href="https://github.com/Karthick-dev-cart/chess/releases/download/v1.0.0/chess-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/chess/releases/download/v1.0.0/chess.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="connectfour">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>connectfour</h4>
+    <p>🔴🟡 Connect Four built with Flutter — minimax + alpha-beta pruning AI, tested against concrete tactical positions (winning drops, blocking threats).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/connectfour" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/connectfour/releases/download/v1.0.0/connectfour-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/connectfour/releases/download/v1.0.0/connectfour.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="crazyeights">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>crazyeights</h4>
+    <p>Crazy Eights in Flutter — the classic shedding card game against an AI opponent, with proper wild-8 suit declaration overriding subsequent rank/suit matching.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/crazyeights" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/crazyeights/releases/download/v1.0.0/crazyeights-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/crazyeights/releases/download/v1.0.0/crazyeights.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="doodlejumper">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>doodlejumper</h4>
+    <p>Doodle Jumper in Flutter — drag-steered vertical platformer with screen-wrap, procedurally scrolling platform field, and local best-score tracking.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/doodlejumper" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/doodlejumper/releases/download/v1.0.0/doodlejumper-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/doodlejumper/releases/download/v1.0.0/doodlejumper.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="dotsandboxes">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>dotsandboxes</h4>
+    <p>🔲 Dots and Boxes built with Flutter, minimax AI that avoids gifting 3-sided boxes.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/dotsandboxes" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/dotsandboxes/releases/download/v1.0.0/dotsandboxes-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/dotsandboxes/releases/download/v1.0.0/dotsandboxes.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="fifteenpuzzle">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>fifteenpuzzle</h4>
+    <p>The classic 15 sliding-tile puzzle in Flutter — generated to always be solvable via the parity invariant that governs which of the 16! arrangements are reachable, verified against the historic 14-15-swap unsolvable case.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/fifteenpuzzle" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/fifteenpuzzle/releases/download/v1.0.0/fifteenpuzzle-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/fifteenpuzzle/releases/download/v1.0.0/fifteenpuzzle.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="floodfill">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>floodfill</h4>
+    <p>Flood Fill (Flood-It) in Flutter — a connectivity puzzle where each move floods your BFS-connected region into a new color, absorbing every newly-adjacent matching cell, within a move limit.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/floodfill" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/floodfill/releases/download/v1.0.0/floodfill-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/floodfill/releases/download/v1.0.0/floodfill.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="freecell">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>freecell</h4>
+    <p>Freecell Solitaire in Flutter — the real ruleset (single-card moves aren&#x27;t a simplification here, they&#x27;re how Freecell actually works) across tableau, free cells, and foundations.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/freecell" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/freecell/releases/download/v1.0.0/freecell-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/freecell/releases/download/v1.0.0/freecell.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="fruitslice">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>fruitslice</h4>
+    <p>Fruit Slice in Flutter — drag to slice fruit launched on real parabolic trajectories under gravity, hit-tested against the swipe&#x27;s line segment (clamped, not the infinite line through it).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/fruitslice" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/fruitslice/releases/download/v1.0.0/fruitslice-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/fruitslice/releases/download/v1.0.0/fruitslice.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="gofish">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>gofish</h4>
+    <p>Go Fish in Flutter — the classic card game against an AI opponent, with full ask/go-fish/book rules and both end-game conditions correctly handled.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/gofish" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/gofish/releases/download/v1.0.0/gofish-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/gofish/releases/download/v1.0.0/gofish.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="gomoku">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>gomoku</h4>
+    <p>Gomoku (five-in-a-row) in Flutter — threat-scoring heuristic (open runs weighted far above blocked ones) searched via depth-limited minimax with alpha-beta pruning over locally-restricted candidate moves.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/gomoku" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/gomoku/releases/download/v1.0.0/gomoku-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/gomoku/releases/download/v1.0.0/gomoku.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="hangman">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>hangman</h4>
+    <p>🎯 Classic Hangman built with Flutter.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/hangman" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/hangman/releases/download/v1.0.0/hangman-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/hangman/releases/download/v1.0.0/hangman.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="lightcycles">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>lightcycles</h4>
+    <p>Tron-style Light Cycles in Flutter — the AI opponent picks its direction by flood-filling reachable open space each tick and maximizing it, a real space-maximization technique from actual Tron bots.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/lightcycles" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/lightcycles/releases/download/v1.0.0/lightcycles-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/lightcycles/releases/download/v1.0.0/lightcycles.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="lightsout">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>lightsout</h4>
+    <p>💡 Lights Out built with Flutter, provably-solvable puzzle generator (scrambles from solved, not random cells).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/lightsout" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/lightsout/releases/download/v1.0.0/lightsout-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/lightsout/releases/download/v1.0.0/lightsout.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="mancala">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>mancala</h4>
+    <p>🌰 Mancala (Kalah rules) built with Flutter, extra-turn and capture mechanics, minimax AI.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/mancala" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/mancala/releases/download/v1.0.0/mancala-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/mancala/releases/download/v1.0.0/mancala.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="mastermind">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>mastermind</h4>
+    <p>⚫⚪ Mastermind built with Flutter, duplicate-color-aware peg feedback (same algorithm shape as Wordle&#x27;s letter coloring).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/mastermind" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/mastermind/releases/download/v1.0.0/mastermind-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/mastermind/releases/download/v1.0.0/mastermind.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="match3">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>match3</h4>
+    <p>Match 3 in Flutter — swap adjacent gems, clear runs of 3+, and watch gravity-fill trigger real cascading chain reactions until the board settles.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/match3" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/match3/releases/download/v1.0.0/match3-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/match3/releases/download/v1.0.0/match3.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="mathquiz">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>mathquiz</h4>
+    <p>➗ Math Quiz Sprint built with Flutter, division problems guaranteed to always divide evenly.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/mathquiz" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/mathquiz/releases/download/v1.0.0/mathquiz-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/mathquiz/releases/download/v1.0.0/mathquiz.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="mazerunner">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>mazerunner</h4>
+    <p>Maze Runner in Flutter — swipe-navigate a freshly generated maze (randomized recursive backtracker) while racing a real breadth-first-search shortest-path AI to the exit.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/mazerunner" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/mazerunner/releases/download/v1.0.0/mazerunner-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/mazerunner/releases/download/v1.0.0/mazerunner.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="memorymatch">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>memorymatch</h4>
+    <p>Memory Match in Flutter — a space-themed concentration/pairs game with a clean flip/match/mismatch-resolution state machine and locally tracked best move count.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/memorymatch" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/memorymatch/releases/download/v1.0.0/memorymatch-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/memorymatch/releases/download/v1.0.0/memorymatch.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="minesweeper">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>minesweeper</h4>
+    <p>💣 Classic Minesweeper built with Flutter — safe first click, flood-fill reveal.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/minesweeper" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/minesweeper/releases/download/v1.0.0/minesweeper-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/minesweeper/releases/download/v1.0.0/minesweeper.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="minicrossword">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>minicrossword</h4>
+    <p>Mini Crossword in Flutter — standard crossword numbering and across/down word slots derived algorithmically from any block-pattern grid, not hardcoded per puzzle.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/minicrossword" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/minicrossword/releases/download/v1.0.0/minicrossword-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/minicrossword/releases/download/v1.0.0/minicrossword.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="nim">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>nim</h4>
+    <p>🪙 Nim built with Flutter, AI plays the mathematically perfect nim-sum strategy from combinatorial game theory.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/nim" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/nim/releases/download/v1.0.0/nim-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/nim/releases/download/v1.0.0/nim.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="pegsolitaire">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>pegsolitaire</h4>
+    <p>Peg Solitaire in Flutter — the classic 33-hole cross-board puzzle with full straight-line jump validation and both end-state checks (stuck vs. solved).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/pegsolitaire" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/pegsolitaire/releases/download/v1.0.0/pegsolitaire-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/pegsolitaire/releases/download/v1.0.0/pegsolitaire.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="pixelchase">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>pixelchase</h4>
+    <p>Pixel Chase in Flutter — a Pac-Man-style maze chase where ghosts hunt with a fresh BFS shortest-path recompute every tick and flee (maximize-distance) once you&#x27;ve eaten a power pellet.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/pixelchase" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/pixelchase/releases/download/v1.0.0/pixelchase-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/pixelchase/releases/download/v1.0.0/pixelchase.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="pong">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>pong</h4>
+    <p>🏓 Pong built with Flutter, speed-capped ball-tracking AI paddle (beatable by design).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/pong" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/pong/releases/download/v1.0.0/pong-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/pong/releases/download/v1.0.0/pong.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="puzzle2048">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>puzzle2048</h4>
+    <p>🔢 2048 built with Flutter, tested tile-merge logic (no accidental chain merges).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/puzzle2048" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/puzzle2048/releases/download/v1.0.0/puzzle2048-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/puzzle2048/releases/download/v1.0.0/puzzle2048.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="reversi">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>reversi</h4>
+    <p>⚫⚪ Reversi/Othello built with Flutter, positional-weight minimax AI (corners/edges, not raw disc count).</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/reversi" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/reversi/releases/download/v1.0.0/reversi-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/reversi/releases/download/v1.0.0/reversi.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="rps">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>rps</h4>
+    <p>🪨📄✂️ Rock Paper Scissors built with Flutter, vs an AI that tracks and counters your move patterns instead of picking randomly.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/rps" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/rps/releases/download/v1.0.0/rps-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/rps/releases/download/v1.0.0/rps.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="simonsays">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>simonsays</h4>
+    <p>🔴🟢🔵🟡 Simon Says color pattern memory game built with Flutter.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/simonsays" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/simonsays/releases/download/v1.0.0/simonsays-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/simonsays/releases/download/v1.0.0/simonsays.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="skyhop">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>skyhop</h4>
+    <p>🐤 A flappy-style endless obstacle dodger built with Flutter — tap, click, or press Space to flap through the gaps.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/skyhop" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/skyhop/releases/download/v1.0.0/skyhop-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/skyhop/releases/download/v1.0.0/skyhop.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="snake">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>snake</h4>
+    <p>🐍 Classic grid-based Snake built with Flutter — swipe or arrow-key/WASD controls, speeds up as you grow, local best score.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/snake" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/snake/releases/download/v1.0.0/snake-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/snake/releases/download/v1.0.0/snake.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="solitaire">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>solitaire</h4>
+    <p>🃏 Klondike Solitaire built with Flutter.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/solitaire" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/solitaire/releases/download/v1.0.0/solitaire-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/solitaire/releases/download/v1.0.0/solitaire.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="spaceinvaders">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>spaceinvaders</h4>
+    <p>Classic Space Invaders arcade shooter — Ticker-driven Flutter engine with advancing invader waves, dodgeable enemy fire, and local high scores.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/spaceinvaders" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/spaceinvaders/releases/download/v1.0.0/spaceinvaders-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/spaceinvaders/releases/download/v1.0.0/spaceinvaders.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="sudoku">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>sudoku</h4>
+    <p>🔢 Classic 9x9 Sudoku built with Flutter — a real backtracking generator guarantees every puzzle has exactly one solution.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/sudoku" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/sudoku/releases/download/v1.0.0/sudoku-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/sudoku/releases/download/v1.0.0/sudoku.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="tetris">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>tetris</h4>
+    <p>Tetris in Flutter — 7-bag piece randomizer, tetromino rotations derived by rotating a matrix rather than hand-copied tables, real gravity/lock/line-clear rules, keyboard and swipe controls.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/tetris" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/tetris/releases/download/v1.0.0/tetris-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/tetris/releases/download/v1.0.0/tetris.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="threesmerge">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>threesmerge</h4>
+    <p>Threes-style sliding merge puzzle in Flutter — each tile moves at most one cell per swipe (not a full 2048-style slide), with the signature 1+2=3 special-pair merge rule.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/threesmerge" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/threesmerge/releases/download/v1.0.0/threesmerge-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/threesmerge/releases/download/v1.0.0/threesmerge.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="tictactoe">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>tictactoe</h4>
+    <p>❌⭕ Tic-Tac-Toe built with Flutter with an actually-unbeatable minimax AI, verified by an exhaustive never-loses test.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/tictactoe" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/tictactoe/releases/download/v1.0.0/tictactoe-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/tictactoe/releases/download/v1.0.0/tictactoe.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="towerofhanoi">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>towerofhanoi</h4>
+    <p>Tower of Hanoi in Flutter — the classic 3-peg puzzle plus a recursive optimal solver, verified by actually replaying its full move sequence against the game engine.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/towerofhanoi" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/towerofhanoi/releases/download/v1.0.0/towerofhanoi-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/towerofhanoi/releases/download/v1.0.0/towerofhanoi.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="triviaquiz">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>triviaquiz</h4>
+    <p>Trivia Quiz in Flutter — timed multiple-choice quiz with a consecutive-correct streak bonus and a general-knowledge question bank.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/triviaquiz" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/triviaquiz/releases/download/v1.0.0/triviaquiz-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/triviaquiz/releases/download/v1.0.0/triviaquiz.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="typingtest">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>typingtest</h4>
+    <p>⌨️ Typing speed test built with Flutter, standard WPM + accuracy scoring.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/typingtest" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/typingtest/releases/download/v1.0.0/typingtest-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/typingtest/releases/download/v1.0.0/typingtest.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="ultimatetictactoe">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>ultimatetictactoe</h4>
+    <p>Ultimate Tic-Tac-Toe in Flutter — the meta-board variant where your move sends the opponent to a specific sub-board, played against a depth-limited minimax AI with macro/micro line-potential heuristics.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/ultimatetictactoe" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/ultimatetictactoe/releases/download/v1.0.0/ultimatetictactoe-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/ultimatetictactoe/releases/download/v1.0.0/ultimatetictactoe.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="war">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>war</h4>
+    <p>⚔️ The card game War, built with Flutter -- correct deck bookkeeping through the war/tie mechanic.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/war" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/war/releases/download/v1.0.0/war-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/war/releases/download/v1.0.0/war.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="whackamole">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>whackamole</h4>
+    <p>🐹 Whack-a-Mole reflex game built with Flutter.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/whackamole" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/whackamole/releases/download/v1.0.0/whackamole-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/whackamole/releases/download/v1.0.0/whackamole.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="wordle">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>wordle</h4>
+    <p>🟩 A Wordle-style 5-letter word guessing game built with Flutter — duplicate-letter-aware color feedback, on-screen + physical keyboard, win streak.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/wordle" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/wordle/releases/download/v1.0.0/wordle-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/wordle/releases/download/v1.0.0/wordle.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="wordsearch">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>wordsearch</h4>
+    <p>🔍 Word Search built with Flutter, 8-direction word placement, straight-line tap selection.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/wordsearch" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/wordsearch/releases/download/v1.0.0/wordsearch-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/wordsearch/releases/download/v1.0.0/wordsearch.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+<article class="project-card" data-name="yahtzee">
+    <div class="project-card-top">
+        <span class="achievement-badge">GAME</span>
+        
+    </div>
+    <h4>yahtzee</h4>
+    <p>🎲 Yahtzee built with Flutter, full 13-category scorecard with unit-tested scoring rules.</p>
+    <div class="project-links">
+        <a href="https://github.com/Karthick-dev-cart/yahtzee" target="_blank" rel="noopener noreferrer" class="pill-link">Code &middot; C++</a>
+        <a href="https://github.com/Karthick-dev-cart/yahtzee/releases/download/v1.0.0/yahtzee-windows.zip" class="pill-link pill-link-accent">Windows</a><a href="https://github.com/Karthick-dev-cart/yahtzee/releases/download/v1.0.0/yahtzee.apk" class="pill-link pill-link-accent">Android</a>
+    </div>
+</article>
+                </div>
+                <p class="games-empty" id="games-empty" hidden>No games match &ldquo;<span id="games-empty-query"></span>&rdquo;.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://github.com/Karthick-dev-cart" target="_blank" rel="noopener noreferrer" class="btn btn-primary">See everything on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="alt">
+        <div class="container">
+            <h2>Certifications & Credentials</h2>
+            <p class="section-subtitle">Industry-recognized expertise and continuous learning</p>
+
+            <div class="certifications-grid">
+                <div class="cert-badge">
+                    <div class="cert-org">Anthropic / AI</div>
+                    <div class="cert-name">Anthropic Skill Jar Certified</div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Introduction to Claude Cowork • Claude Code • AI Fluency</div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-org">Microsoft</div>
+                    <div class="cert-name">Azure Fundamentals (AZ-900)</div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-org">Microsoft</div>
+                    <div class="cert-name">Dynamics 365 for Sales (MB2-717)</div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-org">Microsoft</div>
+                    <div class="cert-name">Dynamics 365 Fundamentals (MB-910)</div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-org">Microsoft</div>
+                    <div class="cert-name">Power Platform Fundamentals (PL-900)</div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-org">Oracle</div>
+                    <div class="cert-name">Certified J2EE Professional</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(212, 175, 55, 0.08); border: 1px solid var(--border); border-radius: 1rem;">
+                <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Education</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">
+                    <strong>B.E. Computer Science</strong> — Sree Sastha Institute of Engineering and Technology (2012–2016)
+                </p>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    CGPA 8.1/10 • Ranked 1st in batch of 230 (Silver Medalist) • Best Outgoing Student of the Year
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container contact-content">
+            <h2>Let's Build AI-Powered Systems Together</h2>
+            <p class="section-subtitle" style="max-width: 100%;">
+                Available for consulting, strategic partnerships, and full-time opportunities. Specializing in AI/agentic systems, MCP architecture, and building intelligent platforms that scale.
+            </p>
+
+            <div class="contact-buttons">
+                <a href="mailto:karthickd.tech@gmail.com" class="btn btn-primary">Send Email</a>
+                <a href="https://github.com/Karthick-dev-cart" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+                <a href="https://linkedin.com/in/karthick-lakshmidhanapal-bab76324b" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
+            </div>
+
+            <div class="contact-info">
+                <div>📍 Chennai, Tamil Nadu, India</div>
+                <div>📧 karthickd.tech@gmail.com</div>
+                <div>📱 +91-9500638871</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Karthick Dhanapal. AI & Agentic Systems Engineer. Built with HTML, CSS & JavaScript.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const navLinks = document.getElementById('nav-links');
+        const navToggle = document.getElementById('nav-toggle');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                navLinks.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll(
+            '.achievements-grid, .certifications-grid, .skills-grid, .projects-grid'
+        ).forEach(grid => {
+            Array.from(grid.children).forEach((el, i) => {
+                el.style.animationDelay = `${Math.min(i % 4, 3) * 90}ms`;
+            });
+        });
+
+        document.querySelectorAll('.achievement-card, .cert-badge, .experience-item, .skill-category, .project-card, .stat-tile').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Project category filter tabs
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const categories = document.querySelectorAll('.project-category');
+        function applyFilter(filter) {
+            categories.forEach(cat => {
+                cat.hidden = !(filter === 'all' || cat.dataset.category === filter);
+            });
+            filterBtns.forEach(b => b.setAttribute('aria-selected', b.dataset.filter === filter ? 'true' : 'false'));
+        }
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+        });
+        applyFilter('flagship');
+
+        // Game search
+        const gameSearch = document.getElementById('game-search');
+        const gamesGrid = document.getElementById('games-grid');
+        const gamesEmpty = document.getElementById('games-empty');
+        const gamesEmptyQuery = document.getElementById('games-empty-query');
+        if (gameSearch) {
+            gameSearch.addEventListener('input', () => {
+                const q = gameSearch.value.trim().toLowerCase();
+                let visibleCount = 0;
+                gamesGrid.querySelectorAll('.project-card').forEach(card => {
+                    const match = card.dataset.name.includes(q);
+                    card.style.display = match ? '' : 'none';
+                    if (match) visibleCount++;
+                });
+                gamesEmpty.hidden = visibleCount !== 0;
+                gamesEmptyQuery.textContent = gameSearch.value.trim();
+            });
+        }
+
+        // Animated stat counters (respects prefers-reduced-motion)
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                statObserver.unobserve(entry.target);
+                if (reduceMotion) return;
+                const el = entry.target;
+                const target = parseInt(el.dataset.target, 10);
+                const duration = 1200;
+                const start = performance.now();
+                function tick(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(eased * target);
+                    if (progress < 1) requestAnimationFrame(tick);
+                    else el.textContent = target;
+                }
+                el.textContent = '0';
+                requestAnimationFrame(tick);
+            });
+        }, { threshold: 0.4 });
+        document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+
+        // Neural-network canvas — hero background
+        (function () {
+            const canvas = document.getElementById('neural-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const hero = canvas.parentElement;
+            let nodes = [];
+            let w, h;
+            const NODE_COUNT = 46;
+            const LINK_DIST = 130;
+
+            function resize() {
+                w = canvas.width = hero.offsetWidth;
+                h = canvas.height = hero.offsetHeight;
+            }
+
+            function makeNodes() {
+                nodes = Array.from({ length: NODE_COUNT }, () => ({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    vx: (Math.random() - 0.5) * 0.35,
+                    vy: (Math.random() - 0.5) * 0.35,
+                }));
+            }
+
+            function step() {
+                ctx.clearRect(0, 0, w, h);
+                nodes.forEach(n => {
+                    n.x += n.vx; n.y += n.vy;
+                    if (n.x < 0 || n.x > w) n.vx *= -1;
+                    if (n.y < 0 || n.y > h) n.vy *= -1;
+                });
+                for (let i = 0; i < nodes.length; i++) {
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < LINK_DIST) {
+                            ctx.strokeStyle = `rgba(157, 78, 221, ${0.35 * (1 - dist / LINK_DIST)})`;
+                            ctx.lineWidth = 1;
+                            ctx.beginPath();
+                            ctx.moveTo(nodes[i].x, nodes[i].y);
+                            ctx.lineTo(nodes[j].x, nodes[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                nodes.forEach(n => {
+                    ctx.fillStyle = 'rgba(212, 175, 55, 0.8)';
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, 1.8, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+            }
+
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            resize();
+            makeNodes();
+            if (reduceMotion) {
+                step();
+            } else {
+                let raf;
+                function loop() {
+                    step();
+                    raf = requestAnimationFrame(loop);
+                }
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) cancelAnimationFrame(raf);
+                    else loop();
+                });
+                loop();
+                window.addEventListener('resize', () => { resize(); makeNodes(); });
+            }
+        })();
+
+        // Card tilt on hover (fine pointers only)
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+            !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.achievement-card, .project-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const px = (e.clientX - rect.left) / rect.width - 0.5;
+                    const py = (e.clientY - rect.top) / rect.height - 0.5;
+                    card.style.transition = 'none';
+                    card.style.transform = `perspective(600px) rotateX(${-py * 6}deg) rotateY(${px * 6}deg) translateY(-4px)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transition = 'transform 0.4s ease';
+                    card.style.transform = '';
+                });
+            });
+        }
+
+        // Scrollspy — highlight the active nav link
+        const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+        const spySections = Array.from(navAnchors).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+        const spyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        spySections.forEach(s => spyObserver.observe(s));
+
+        // Hero ticker — rotating facts about the wider portfolio
+        const tickerFacts = [
+            'Also shipping on the side: 91 public repos',
+            '58 Flutter games, 57 with real Windows + Android releases',
+            '24 tools for LLM & agent cost, RAG quality, and observability',
+            '4 MCP servers for ops triage and OSS discovery',
+        ];
+        const tickerEl = document.getElementById('hero-ticker-text');
+        if (tickerEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            let tickerIdx = 0;
+            setInterval(() => {
+                tickerEl.classList.add('swap');
+                setTimeout(() => {
+                    tickerIdx = (tickerIdx + 1) % tickerFacts.length;
+                    tickerEl.textContent = tickerFacts[tickerIdx];
+                    tickerEl.classList.remove('swap');
+                }, 400);
+            }, 3400);
+        }
+    </script>
+</body>
+</html>
